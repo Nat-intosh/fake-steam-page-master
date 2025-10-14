@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        REPO_URL: "https://github.com/your-username/your-repo.git"
+        REPO_REF: "main"    # optional: branch, tag or commit
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    # For development you may want to mount local files instead of cloning:
+    # volumes:
+    #   - ./local-copy:/usr/share/nginx/html:ro
