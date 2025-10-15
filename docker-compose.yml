@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        REPO_URL: "https://github.com/your-username/your-repo.git"
+        REPO_URL: "https://github.com/Nat-intosh/fake-steam-page-master"
         REPO_REF: "main"    # optional: branch, tag or commit
     ports:
       - "8080:80"
